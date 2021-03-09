@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 function Main({ children }) {
-  return <main>{children}</main>;
+  return <main className="container mx-auto">{children}</main>;
 }
 
 Main.propTypes = {

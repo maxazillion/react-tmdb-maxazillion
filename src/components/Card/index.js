@@ -6,11 +6,11 @@ function generateImgSrc(path) {
 
 const Card = ({ title, id, path }) => {
   return (
-    <section>
+    <section className="text-center border-2">
       <h2>{title}</h2>
       <figure>
         <img
-          className="max-h-30"
+          className="rounded"
           src={generateImgSrc(path)}
           atl={`Movie Poster ${title}`}
         />

@@ -15,16 +15,18 @@ export const Home = () => {
   console.log(movies);
   return (
     <Main>
-      {movies.map((movie, index) => {
-        return (
-          <Card
-            key={movie.id}
-            title={movie.title}
-            path={movie.poster_path}
-            id={movie.id}
-          />
-        );
-      })}
+      <div className="grid grid-cols-5 gap-4">
+        {movies.map((movie, index) => {
+          return (
+            <Card
+              key={movie.id}
+              title={movie.title}
+              path={movie.poster_path}
+              id={movie.id}
+            />
+          );
+        })}
+      </div>
     </Main>
   );
 };
