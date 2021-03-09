@@ -1,6 +1,6 @@
 import api from "api";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Film() {
   const [movie, setMovie] = useState({});
@@ -16,7 +16,14 @@ function Film() {
   const location = useLocation();
   //location.pathname
   ///movie/{movie_id}
-  return <p>Film</p>;
+  return (
+    <>
+      <Link to="">
+        <button className="bg-red-300 rounded">Back</button>
+      </Link>
+      <p>Film</p>
+    </>
+  );
 }
 
 export default Film;
