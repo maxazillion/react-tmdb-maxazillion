@@ -16,8 +16,9 @@ const Card = ({ title, id, path, date }) => {
           atl={`Movie Poster ${title}`}
         />
         <h2>{date}</h2>
-        <button className="bg-gray-50 rounded">see more</button>
-        <Link to="./Film">Simple</Link>
+        <Link to={`/${id}`}>
+          <button className="bg-gray-50 rounded">see more</button>
+        </Link>
       </figure>
     </section>
   );
