@@ -1,5 +1,6 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import api from "./api";
-import { Home } from "./pages";
+import { Film, Home } from "./pages";
 
 (async () => {
   console.log(api.index());
@@ -7,9 +8,16 @@ import { Home } from "./pages";
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/:id">
+          <Film />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

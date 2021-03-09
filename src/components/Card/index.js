@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function generateImgSrc(path) {
   return `https://image.tmdb.org/t/p/w500${path}`;
@@ -15,6 +16,8 @@ const Card = ({ title, id, path, date }) => {
           atl={`Movie Poster ${title}`}
         />
         <h2>{date}</h2>
+        <button className="bg-gray-50 rounded">see more</button>
+        <Link to="./Film">Simple</Link>
       </figure>
     </section>
   );
