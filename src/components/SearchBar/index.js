@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 
 function SearchBar({ handler, label }) {
   return (
-    <form>
+    <form onSubmit={handler}>
       <label htmlFor="search" className="sr-only">
         {label}
       </label>
-      <input onKeyUp={handler} type="search" id="search" />
-      <button onClick={handler}>Search!</button>
+      <input type="search" id="search" />
+      <button>Search!</button>
     </form>
   );
 }

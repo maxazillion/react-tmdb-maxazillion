@@ -2,10 +2,6 @@ import api from "api";
 import { Card, Main, SearchBar } from "components";
 import { useEffect, useState } from "react";
 
-function handleSearch(event) {
-  event.preventDefault();
-}
-
 export const Home = () => {
   const [movies, setMovies] = useState([]);
 
@@ -16,7 +12,13 @@ export const Home = () => {
     })();
   }, []);
 
-  console.log(movies);
+  async function handleSearch(event) {
+    event.preventDefault();
+    const { results } = await api.index("/search/movie", {
+      query: event.target.elements[0].value,
+    });
+    setMovies(() => results);
+  }
   return (
     <Main>
       <div className="center">
@@ -24,11 +26,14 @@ export const Home = () => {
       </div>
       <div className="grid grid-cols-5 gap-4">
         {movies.map((movie, index) => {
+          //TODO: pass the date
           return (
             <Card
               key={movie.id}
               title={movie.title}
               path={movie.poster_path}
+              //date={new Date(movie.date).toLocaleDataString()}
+              date={movie.release_date}
               id={movie.id}
             />
           );
