@@ -21,7 +21,7 @@ const Card = ({ title, id, path }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   path: PropTypes.string.isRequired,
 };
 
