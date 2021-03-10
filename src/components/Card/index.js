@@ -5,19 +5,19 @@ function generateImgSrc(path) {
   return `https://image.tmdb.org/t/p/w500${path}`;
 }
 
-const Card = ({ title, id, path, date }) => {
+const Card = ({ title, id, path, date, classAttributes = "rounded" }) => {
   return (
     <section className="text-center border-2">
       <h2>{title}</h2>
       <figure>
         <img
-          className="rounded"
+          className={classAttributes}
           src={generateImgSrc(path)}
           atl={`Movie Poster ${title}`}
         />
         <h2>{date}</h2>
         <Link to={`/${id}`}>
-          <button className="bg-gray-50 rounded">see more</button>
+          <button className="rounded bg-gray-50">see more</button>
         </Link>
       </figure>
     </section>
@@ -29,6 +29,7 @@ Card.propTypes = {
   id: PropTypes.number.isRequired,
   path: PropTypes.string.isRequired,
   date: PropTypes.string,
+  classAttributes: PropTypes.string,
 };
 
 export default Card;

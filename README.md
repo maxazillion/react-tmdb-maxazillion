@@ -1,6 +1,7 @@
 # Typing Speed Tester
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses KY as well as tailwinds
 
 ## Table of Contents
 
@@ -11,24 +12,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Overview
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
+- This app is deployed on maxazilliion's netlify
+- I learned how to implement the api to search for specific titles
+- I learned how to route the page easier
 - Your wisdom? :)
 
 ### Built With
 
 - [React](https://reactjs.org/)
 - [Tailwind](https://tailwindcss.com/)
+- [ky](https://github.com/sindresorhus/ky)
 
 ## Features
 
+- home screen displays movie titles that are popular
+- search bar can narrow search down
+- clicking "see more" shows more information about the app
+- back button navigates back to the home page
+
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
-
-<!-- TODO: Update author in package.json! -->
+- email: jason@rodgersworld.com

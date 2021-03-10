@@ -21,7 +21,7 @@ export const Home = () => {
   }
   return (
     <Main>
-      <div className="center">
+      <div>
         <SearchBar handler={handleSearch} label="Search Movie Titles" />
       </div>
       <div className="grid grid-cols-5 gap-4">
