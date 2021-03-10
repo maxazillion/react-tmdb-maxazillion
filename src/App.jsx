@@ -8,16 +8,21 @@ import { Film, Home } from "./pages";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/:id">
-          <Film />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <div className="flex min-w-max border-gray-500 border-2">
+        <h1 className="m-3 self-center font-bold">TMDB Search</h1>
+      </div>
+      <Router>
+        <Switch>
+          <Route path="/:id">
+            <Film />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

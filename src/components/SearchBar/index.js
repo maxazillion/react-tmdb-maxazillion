@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 function SearchBar({ handler, label }) {
   return (
     <form onSubmit={handler}>
-      <div className="flex self-center">
+      <div className="flex self-center p-2 m-3">
         <label htmlFor="search" className="sr-only">
           {label}
         </label>
-        <input type="search" id="search" />
+        <input className="m-2" type="search" id="search" />
         <button>Search!</button>
       </div>
     </form>
